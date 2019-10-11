@@ -91,6 +91,40 @@ ip,location,city,region_name,zip,country_name,continent_name,latitude,longitude
 
 ```
 
+### 6. Pipe to `jq` with `--format json` option so you can do your own thing.
+```
+{
+  "ip": "98.138.219.232",
+  "type": "ipv4",
+  "continent_code": "NA",
+  "continent_name": "North America",
+  "country_code": "US",
+  "country_name": "United States",
+  "region_code": "NY",
+  "region_name": "New York",
+  "city": "Manhattan",
+  "zip": "10003",
+  "latitude": 40.73139190673828,
+  "longitude": -73.9884033203125,
+  "location": {
+    "geoname_id": 5125771,
+    "capital": "Washington D.C.",
+    "languages": [
+      {
+        "code": "en",
+        "name": "English",
+        "native": "English"
+      }
+    ],
+    "country_flag": "http://assets.ipstack.com/flags/us.svg",
+    "country_flag_emoji": "🇺🇸",
+    "country_flag_emoji_unicode": "U+1F1FA U+1F1F8",
+    "calling_code": "1",
+    "is_eu": false
+  }
+}
+```
+
 
 
 # Problems running?
