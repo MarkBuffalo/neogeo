@@ -10,7 +10,7 @@ class NeoGeo:
     def __init__(self):
 
         # Put your IPStack token here, or pass --token
-        self.token = "PUT YOUR IPSTACK TOKEN HERE, DO NOT STEAL MINE :-D"
+        self.token = "PUT YOUR IPSTACK TOKEN HERE NAO"
 
         self.parser = argparse.ArgumentParser(description="Geolocate a single ip, or a list of them. "
                                                           "Requires an ipstack API key")
@@ -54,8 +54,6 @@ class NeoGeo:
 
         # There's a bit of redundant information otherwise.
         self.full_output = False
-
-        self.output_file = None
         self.output_format = "tsv"
         self.input_file = None
         self.file_handle = None
@@ -137,7 +135,6 @@ class NeoGeo:
 
         # Do we have a list of IPs instead? Let's use that.
         elif self.args.ips and self.token:
-            self.output_file = self.args.format
             self.input_file = self.args.ips
             self.geolocate_ips_from_list()
 
@@ -164,14 +161,17 @@ class NeoGeo:
 
             # Now let's print the content. JSON is already done, so we can just directly return the content string.
             # Otherwise, we need to get the rows.
-            self.write_print(content if self.output_format == "json" else self.get_rows())
+            if self.file_handle:
+                self.write_print(content if self.output_format == "json" else self.get_rows())
+            else:
+                print(content if self.output_format == "json" else self.get_rows())
 
     def geolocate_ip(self, ip):
         try:
             r = self.make_request(ip)
             if r.status_code == 200:
                 # If this is a tsv or csv output, the first thing we do is output the columns.
-                if self.get_columns():
+                if not self.hide_column:
                     print(self.get_columns())
                 self.is_column = False
                 self.check_content(r)
@@ -188,13 +188,13 @@ class NeoGeo:
     def geolocate_ips_from_list(self):
         # If this is a tsv or csv output, the first thing we do is output the columns.
         self.is_column = True
-        if self.get_columns():
+        if not self.hide_column:
             print(self.get_columns())
         self.is_column = False
         # And then we open the input file for reading, followed by the output file.
         try:
-            with open(self.input_file, "r") as file, open(time.strftime("%Y-%m-%d-%H-%M-%S") + "." +
-                                                          self.output_file, "a") as self.file_handle:
+            with open(self.input_file, "r") as file, open(str(time.strftime("%Y-%m-%d-%H-%M-%S") + "." +
+                                                              self.output_format), "a") as self.file_handle:
                 # We want unique IPs.
                 lines = list(set(file.readlines()))
                 for ip in lines:
