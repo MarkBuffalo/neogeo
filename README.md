@@ -124,6 +124,11 @@ ip,location,city,region_name,zip,country_name,continent_name,latitude,longitude
   }
 }
 ```
+#### 7. Coming soon: a better `--full`
+```
+NotImplementedException
+```
+
 
 
 
