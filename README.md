@@ -14,7 +14,7 @@ Sometimes you have to do the thing with OSINT quickly. Or something.
 
 1. Sign up for a free account at https://ipstack.com/
 2. ```git clone https://github.com/MarkBuffalo/neogeo.git && cd neogeo```
-3. Update `self.token` with your Ipstack token.
+3. In neogeo.py, update `self.token` with your Ipstack token.
 4. ```python3 neogeo.py```
 
 
