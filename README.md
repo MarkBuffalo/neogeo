@@ -41,6 +41,17 @@ optional arguments:
 
 # Example usage:
 
+Example new-line separated IP file:
+
+```
+98.137.246.8
+98.138.219.232
+72.30.35.10
+98.138.219.231
+216.58.194.68
+172.217.12.36
+```
+
 ### 1. Single IP Address
 
 When you just need a single hit.
