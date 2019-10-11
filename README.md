@@ -20,6 +20,7 @@ Sometimes you have to do the thing with OSINT quickly. Or something.
 # Options 
 ```
 $ python3 neogeo.py -h
+
 usage: neogeo.py [-h] [-ip IP] [--ips IPS] [--token TOKEN] [-f FORMAT] [-hc]
                  [--full]
 
@@ -66,6 +67,7 @@ ip	location	city	region_name	zip	country_name	continent_name	latitude	longitude
 When you just need a single hit, and no column information.
 ```
 $ python3 neogeo.py -i 172.217.12.36 --hide
+
 172.217.12.36	🇺🇸	Manhattan	New York	10020	United States	North America	40.7589111328125	-73.97901916503906
 ```
 
