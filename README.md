@@ -143,6 +143,9 @@ When you don't want to bother with the way neogeo parses stuff.
     "is_eu": false
   }
 }
+
+You can also pipe the entire output from an unlimited number of json responses, as long as your system memory can handle it. 
+
 ```
 #### 7. Coming soon: a better `--full`
 ```
