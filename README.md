@@ -91,7 +91,7 @@ ip,location,city,region_name,zip,country_name,continent_name,latitude,longitude
 
 ```
 
-### 6. Pipe to `jq` with `--format json` option so you can do your own thing.
+#### 6. Pipe to `jq` with `--format json` option so you can do your own thing.
 ```
 {
   "ip": "98.138.219.232",
