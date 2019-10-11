@@ -1,9 +1,13 @@
 
 ![Picture of the Earth, I guess](https://i.imgur.com/bjKHl7C.png)
 
-# neogeo
+# What is it?
 
-Neogeo is a very simple geolocation tool for python that integrates with ipstack. Other than the API token from ipstack, it works out of the box with python3. Or at least it's supposed to.
+It's neogeo. A very badly named, and very simple geolocation tool for python that integrates with ipstack. Other than the API token from ipstack, it works out of the box with python3. Or at least it's supposed to.
+
+# Why would you use it?
+
+Sometimes you have to do the thing with OSINT quickly. Or something. 
 
 # Installation
 
