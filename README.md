@@ -49,7 +49,7 @@ $ python3 neogeo.py -i 172.217.12.36
 ip	location	city	region_name	zip	country_name	continent_name	latitude	longitude
 172.217.12.36	🇺🇸	Manhattan	New York	10020	United States	North America	40.7589111328125	-73.97901916503906
 ```
-#### 2. Without columns
+#### 2. Without columns (--hide, -hc)
 
 When you just need a single hit, and no column information.
 ```
