@@ -1,0 +1,9 @@
+*.txt
+*.csv
+*.json
+*.tsv
+.idea/*
+.idea/
+venv/*
+venv/
+venv*
