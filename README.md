@@ -151,10 +151,9 @@ $ python3 neogeo.py --ip 98.138.219.232 --format json | jq
     "is_eu": false
   }
 }
-
+```
 You can also pipe the entire output from an unlimited number of json responses, as long as your system memory can handle it. 
 
-```
 #### 7. Coming soon: a better `--full`
 ```
 NotImplementedException
