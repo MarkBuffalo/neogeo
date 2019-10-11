@@ -57,6 +57,7 @@ Example new-line separated IP file:
 When you just need a single hit.
 ```
 $ python3 neogeo.py -i 172.217.12.36
+
 ip	location	city	region_name	zip	country_name	continent_name	latitude	longitude
 172.217.12.36	🇺🇸	Manhattan	New York	10020	United States	North America	40.7589111328125	-73.97901916503906
 ```
@@ -73,6 +74,7 @@ $ python3 neogeo.py -i 172.217.12.36 --hide
 When you need multiple IP addresses. Additionally, the tab separated value format (`--format tsv`; default) is a great option for pasting into google sheets, or excel spreadsheets.
 ```
 $ python3 neogeo.py --ips iptest.txt 
+
 ip	location	city	region_name	zip	country_name	continent_name	latitude	longitude
 172.217.12.36	🇺🇸	Manhattan	New York	10020	United States	North America	40.7589111328125	-73.97901916503906
 98.137.246.8	🇺🇸	Quincy	Washington	98848	United States	North America	47.206031799316406	-119.7993392944336
@@ -87,6 +89,7 @@ ip	location	city	region_name	zip	country_name	continent_name	latitude	longitude
 Makes it easy to use csv tools to import it.
 ````
 $ python3 neogeo.py --ips iptest.txt --format csv
+
 ip,location,city,region_name,zip,country_name,continent_name,latitude,longitude
 172.217.12.36,🇺🇸,Manhattan,New York,10020,United States,North America,40.7589111328125,-73.97901916503906
 98.137.246.8,🇺🇸,Quincy,Washington,98848,United States,North America,47.206031799316406,-119.7993392944336
@@ -101,7 +104,8 @@ ip,location,city,region_name,zip,country_name,continent_name,latitude,longitude
 
 When you just want to print json for some reason.
 ```
- python3 neogeo.py --ips iptest.txt --format json
+$ python3 neogeo.py --ips iptest.txt --format json
+
 {"ip":"98.138.219.232","type":"ipv4","continent_code":"NA","continent_name":"North America","country_code":"US","country_name":"United States","region_code":"NY","region_name":"New York","city":"Manhattan","zip":"10003","latitude":40.73139190673828,"longitude":-73.9884033203125,"location":{"geoname_id":5125771,"capital":"Washington D.C.","languages":[{"code":"en","name":"English","native":"English"}],"country_flag":"http:\/\/assets.ipstack.com\/flags\/us.svg","country_flag_emoji":"\ud83c\uddfa\ud83c\uddf8","country_flag_emoji_unicode":"U+1F1FA U+1F1F8","calling_code":"1","is_eu":false}}
 {"ip":"98.137.246.8","type":"ipv4","continent_code":"NA","continent_name":"North America","country_code":"US","country_name":"United States","region_code":"WA","region_name":"Washington","city":"Quincy","zip":"98848","latitude":47.206031799316406,"longitude":-119.7993392944336,"location":{"geoname_id":null,"capital":"Washington D.C.","languages":[{"code":"en","name":"English","native":"English"}],"country_flag":"http:\/\/assets.ipstack.com\/flags\/us.svg","country_flag_emoji":"\ud83c\uddfa\ud83c\uddf8","country_flag_emoji_unicode":"U+1F1FA U+1F1F8","calling_code":"1","is_eu":false}}
 [...]
@@ -113,6 +117,8 @@ When you just want to print json for some reason.
 When you don't want to bother with the way neogeo parses stuff.
 
 ```
+$ python3 neogeo.py --ip 98.138.219.232 --format json | jq
+
 {
   "ip": "98.138.219.232",
   "type": "ipv4",
