@@ -91,5 +91,5 @@ ip,location,city,region_name,zip,country_name,continent_name,latitude,longitude
 
 # Problems running?
 
-- Make sure there are no blank lines in your file with multiple lines. I'll fix it some other time. 
+- Make sure there are no blank lines in your file with new-line separated IP addresses. I'll fix it some other time. 
 - Anything else? Let me know. 
